@@ -1,0 +1,131 @@
+@font-face{
+	font-family: "03SmartFontUI";
+	src: url("../font/03SmartFontUI.ttf")
+}
+
+
+body{
+	margin: 0;
+}
+
+
+.Header{
+	z-index: 100;
+	position: fixed;
+	width: 100vw;
+	height: 80px;
+	padding-left: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #e0e0e075;
+}
+
+.Header_title{
+	margin: 0;
+	height: 100%;
+}
+
+.Header_titleImg{
+	height: 100%;
+}
+
+
+
+
+
+.shadow{
+	display: none;
+	z-index: 200;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Works{
+	font-family: "03SmartFontUI";
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Works_lists,
+.Works_listsTakucho{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 0;
+	margin: 0;
+}
+
+.Works_lists{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border-bottom: 1px solid #393939;
+}
+
+.Works_listsTakucho{
+	justify-content: center;
+}
+
+.Works_item{
+	z-index: 0;
+	margin: 80px 50px; 
+	width: 200px;
+	height: 200px;
+	list-style: none;
+}
+
+.Works_link{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.Works_whiteImg,
+.Works_colorImg{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.Works_whiteImg{
+	opacity: 1;
+    transform: rotateY(0deg);
+    transition:
+        opacity 100ms 150ms,
+        transform 300ms 150ms;
+}
+
+.Works_colorImg{
+	opacity: 0;
+    transform: rotateY(90deg);
+    transition:
+        opacity 50ms 200ms,
+        transform 300ms;
+}
+
+.Works_link.hover .Works_whiteImg {
+	opacity: 0;
+	transform:rotateY(90deg);
+	transition:
+			opacity 50ms 200ms,
+			transform 300ms;
+}
+
+.Works_link.hover .Works_colorImg {
+	opacity: 1;
+	transform:rotateY(0deg);
+	transition:
+			opacity 100ms 150ms,
+			transform 300ms 150ms;
+}
+
+.Works_name{
+	text-align: center;
+}
